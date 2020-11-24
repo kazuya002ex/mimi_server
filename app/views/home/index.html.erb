@@ -1,1 +1,274 @@
-<h1>GOOD PAGE</h1>
+<form method="post" action="form-opc.cgi" name="earphoneform" onsubmit="return Check()">
+
+<h1>イヤフォンおよびヘッドホンの使用状況アンケート</h1>
+    
+    
+    <p>１．年齢：
+    <input type="text" name="age" size="5" value="">歳<br>
+    </p>
+    
+    <p>２．性別：
+    <select name="sex">
+    <option value="">▽選択してください</option>
+    <option value="男性">男性</option>
+    <option value="女性">女性</option>
+    </select></p>
+    
+    <p>３．職業：
+    <select name="occupation">
+    <option value="">▽選択してください</option>
+    <option value="小学生">小学生</option>
+    <option value="中学生">中学生</option>
+    <option value="高校生">高校生</option>
+    <option value="大学(院)生">大学(院)生</option>
+    <option value="非就業者">非就業者</option>
+    <option value="音楽関係者">音楽関係者</option>
+    <option value="幹部就業者">幹部就業者</option>
+    <option value="騒音職場就業者">騒音職場就業者</option>
+    <option value="一般就業者">一般就業者</option>
+    <option value="その他">その他</option>
+    </select></p>
+    <p>　　　　　　
+    <input type="text" name="other-input" size="10" value="">(上記でその他の場合は入力)<br>
+    </select></p>
+    
+    <p>４．現在、携帯音楽プレイヤーを使っている：
+    <select name="use">
+    <option value="">▽選択してください</option>
+    <option value="はい">はい(質問６へ)</option>
+    <option value="いいえ">いいえ(質問５へ)</option>
+    </select></p>
+    
+    <p>５．過去、携帯音楽プレイヤーを使っていた：
+    <select name="used">
+    <option value="">▽選択してください</option>
+    <option value="はい">はい(質問６へ)</option>
+    <option value="いいえ">いいえ(質問１０へ)</option>
+    </select></p>
+    
+    <p>６．過去あるいは現在の１日平均の使用時間(小数点で回答可)<font color="#ff0000">※半角数字で入力</font>：約
+    <input type="text" name="use-average-day" size="5" value="">時間<br>
+    </select></p>
+    
+    <p>７．使い始めてから現在または使うのを止めるまでの使用期間(小数点で回答可)<font color="#ff0000">※半角数字で入力</font>：約
+    <input type="text" name="use-term" size="5" value="">年<br>
+    </select></p>
+    
+    <p>８．使っている(いた)オーディオプレイヤーのメーカー(複数回答可)：
+    <select name="player-maker">
+    <option value="">▽選択してください</option>
+    <option value="覚えている">覚えている</option>
+    <option value="覚えていない">覚えていない</option>
+    </select></p>
+    <p>　　　　　　　　　　　　　　　　　　覚えている場合は入力
+    <input type="text" name="remember-player-maker-input" size="50" value=""><br>
+    </select></p>
+    
+<!--
+    <p>９．使っている(いた)イヤフォンやヘッドフォンのメーカー(複数回答可)：
+    <select name="ear-head-phone-maker">
+    <option value="no-choice-ear-head-phone-maker"></option>
+    <option value="remember-ear-head-phone-maker-attached">覚えている(付属品)</option>
+    <option value="remember-ear-head-phone-maker-option">覚えている(別売り品)</option>
+    <option value="no-remember-ear-head-phone-maker">覚えていない</option>
+    </select></p>
+    <p>　　　　　　　　　　　　　　　　　　覚えている場合は入力
+    <input type="text" name="remember-ear-head-phone-maker-input" size="50" value=""><br>
+    </select></p>
+-->
+    
+<p>９．使っている(いた)イヤフォンやヘッドフォンのメーカー(複数回答可)：<br><br>
+    <input type="checkbox" name="remember-ear-head-phone-maker-attached" value="覚えている(付属品)"> 覚えている(付属品)
+    <input type="checkbox" name="remember-ear-head-phone-maker-option" value="覚えている(別売り品)"> 覚えている(別売り品)
+    <input type="checkbox" name="no-remember-ear-head-phone-maker" value="覚えていない"> 覚えていない</p>
+    <p>　　　　　　　　　　　　　　　　　　覚えている場合は入力
+    <input type="text" name="remember-ear-head-phone-maker-input" size="50" value=""><br>
+    </p>
+    
+    <p>１０．耳の調子が悪いと感じる：
+    <select name="badear">
+    <option value="">▽選択してください</option>
+    <option value="はい">はい(質問１１へ)</option>
+    <option value="いいえ">いいえ(終了です)</option>
+    </select></p>
+    
+<!--
+    <p>１１．具体的な症状：
+    <select name="symptom">
+    <option value="no-choice-symptom"></option>
+    <option value="ear-hurt">耳が痛い</option>
+    <option value="headache">頭痛がする</option>
+    <option value="bad-hear">聞こえが悪い</option>
+    <option value="ringing">耳鳴りがする</option>
+    <option value="stuffed-up">詰まって感じる</option>
+    <option value="itch">痒みがある</option>
+    <option value="liable-to-disease-ear">耳の病気になりやすい</option>
+    <option value="feel-sick">気持ち悪くなる</option>
+    <option value="symptom-other">その他</option>
+    </select></p>
+    <p>　　　　　　　　　　　　
+    <input type="text" name="symptom-other-input" size="30" value="">(上記でその他の場合は入力)<br>
+    </p>
+-->
+    
+<p>１１．具体的な症状(複数回答可)：<br><br>
+    <input type="checkbox" name="ear-hurt" value="耳が痛い"> 耳が痛い
+    <input type="checkbox" name="headache" value="頭痛がする"> 頭痛がする
+    <input type="checkbox" name="bad-hear" value="聞こえが悪い"> 聞こえが悪い
+    <input type="checkbox" name="ringing" value="耳鳴りがする"> 耳鳴りがする
+    <input type="checkbox" name="stuffed-up" value="詰まって感じる"> 詰まって感じる<br>
+    <input type="checkbox" name="itch" value="痒みがある"> 痒みがある
+    <input type="checkbox" name="liable-to-disease-ear" value="耳の病気になりやすい"> 耳の病気になりやすい
+    <input type="checkbox" name="feel-sick" value="気持ち悪くなる"> 気持ち悪くなる
+    <input type="checkbox" name="symptom-other" value="その他"> その他
+    <p>　　　　　　　　　　　　　　　　　　その他の場合は入力
+    <input type="text" name="symptom-other-input" size="30" value="">(上記でその他の場合は入力)<br>
+    </p>
+    
+    
+    <p>１２．その他コメント：
+    <input type="text" name="comment" size="70" value=""><br>
+    </p>
+    
+<!--耳年齢-->
+    
+<p><font size="6">耳年齢測定</font></p>
+<p>各周波数を上から順に再生してください。<br>最終的に聞こえた周波数の右のボタンをクリックしてください。</p>
+<p>1000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/1000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="1000Hzが聞こえた"onClick="mp31000()"></p>
+    
+<p>2000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/2000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="2000Hzが聞こえた"onClick="mp32000()"></p>
+    
+<p>3000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/3000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="3000Hzが聞こえた"onClick="mp33000()"></p>
+    
+<p>4000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/4000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="4000Hzが聞こえた"onClick="mp34000()"></p>
+    
+<p>5000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/5000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="5000Hzが聞こえた"onClick="mp35000()"></p>
+    
+<p>6000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/6000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="6000Hzが聞こえた"onClick="mp36000()"></p>
+    
+<p>7000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/7000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="7000Hzが聞こえた"onClick="mp37000()"></p>
+    
+<p>8000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/8000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="8000Hzが聞こえた"onClick="mp38000()"></p>
+    
+<p>9000Hz&nbsp;&nbsp;
+<audio src="..//sound/sounddata/9000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="9000Hzが聞こえた"onClick="mp39000()"></p>
+    
+<p>10000Hz
+<audio src="..//sound/sounddata/10000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="10000Hzが聞こえた"onClick="mp310000()"></p>
+    
+<p>11000Hz
+<audio src="..//sound/sounddata/11000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="11000Hzが聞こえた"onClick="mp311000()"></p>
+    
+<p>12000Hz
+<audio src="..//sound/sounddata/12000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="12000Hzが聞こえた"onClick="mp312000()"></p>
+    
+<p>13000Hz
+<audio src="..//sound/sounddata/13000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="13000Hzが聞こえた"onClick="mp313000()"></p>
+    
+<p>14000Hz
+<audio src="..//sound/sounddata/14000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="14000Hzが聞こえた"onClick="mp314000()"></p>
+    
+<p>15000Hz
+<audio src="..//sound/sounddata/15000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="15000Hzが聞こえた"onClick="mp315000()"></p>
+    
+<p>16000Hz
+<audio src="..//sound/sounddata/16000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="16000Hzが聞こえた"onClick="mp316000()"></p>
+    
+<p>17000Hz
+<audio src="..//sound/sounddata/17000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="17000Hzが聞こえた"onClick="mp317000()"></p>
+    
+<p>18000Hz
+<audio src="..//sound/sounddata/18000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="18000Hzが聞こえた"onClick="mp318000()"></p>
+    
+<p>19000Hz
+<audio src="..//sound/sounddata/19000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="19000Hzが聞こえた"onClick="mp319000()"></p>
+    
+<p>20000Hz
+<audio src="..//sound/sounddata/20000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="20000Hzが聞こえた"onClick="mp320000()"></p>
+    
+<p>21000Hz
+<audio src="..//sound/sounddata/21000.mp3" controls>
+    <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+</audio> 
+<input type="button"value="21000Hzが聞こえた"onClick="mp321000()"></p>
+    
+    
+    
+    
+    <p>あなたの耳年齢は
+    <input type="text" name="earage" size="0" value="" readonly>です。<br>
+    </p>
+    
+    
+    
+    <p>耳年齢が表示されたら、送信ボタンを押してください。</p>
+    <p><input type="submit" value="送信する"></p>
+</form>
