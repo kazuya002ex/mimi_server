@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 耳年齢アンケート
 
-Things you may want to cover:
+### API
 
-* Ruby version
+#### Homeコントローラー
 
-* System dependencies
+- home#index(アンケート画面)
+- home#create(アンケート結果のDB書き込み)
 
-* Configuration
+#### EarDocumentsコントローラー
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- ear_documents#show(ログイン時passwordあり(ユーザに事前配布)、Excelに書き込むボタン)
+- ear_documents#create(DBからレコードを引っ張ってきてExcelを作成するアクション)
