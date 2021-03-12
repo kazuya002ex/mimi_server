@@ -7,7 +7,10 @@
 #### Homeコントローラー
 
 - home#index(アンケート画面)
-- home#create(アンケート結果のDB書き込み)
+
+#### Materialsコントローラー
+
+- materials#create(アンケート結果のDB書き込み)
 
 #### EarDocumentsコントローラー
 
