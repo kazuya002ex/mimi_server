@@ -1,0 +1,2 @@
+class EarDocumentsController < ApplicationController
+end
