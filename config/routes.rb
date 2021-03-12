@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root 'home#index'
+
+  # GET Method
+  get '/documents', to: 'ear_documents#show'
+
+  # POST Method
+  post '/documents', to: 'ear_documents#create'
+  post '/materials', to: 'materials#create'
 end
