@@ -4,7 +4,7 @@
     
     <%= form_with url: materials_path do |f| %>
         <p>１．年齢：
-            <input type="text" name="age" size="5" value="">歳<br>
+            <%= f.text_field :age, size: 5 %>歳
         </p>
 
         <p>２．性別：
