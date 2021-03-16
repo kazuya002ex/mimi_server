@@ -2,10 +2,11 @@
 
 <h1>イヤフォンおよびヘッドホンの使用状況アンケート</h1>
     
-    
-    <p>１．年齢：
-    <input type="text" name="age" size="5" value="">歳<br>
-    </p>
+    <%= form_with url: materials_path do |f| %>
+        <p>１．年齢：
+            <input type="text" name="age" size="5" value="">歳<br>
+        </p>
+    <% end %>
     
     <p>２．性別：
     <select name="sex">
